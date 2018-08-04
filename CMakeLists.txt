@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.5.1)
+add_definitions("-std=c++17")
+include_directories(include)
+add_library(DGF src/DGF.cpp)
+add_executable(kaspar src/main.cpp)
+target_link_libraries(kaspar DGF)
